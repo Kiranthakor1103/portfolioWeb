@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.container {
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px;
+    max-width: 900px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.container header {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container header::before {
+    content: "";
+    left: 0;
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: blue;
+
+}
+
+.details-personal {
+    font-size: bold;
+    font-size: 18px;
+}
+
+.container form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: white;
+}
+.container form .form{
+    position: absolute;
+    background-color: white;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+}
+form.secActive .form.second{
+opacity: 1;
+pointer-events: auto;
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events:none;
+    }
+.container form .details {
+    /* margin-top: 20px; */
+}
+
+.container form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container form .second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 -15px);
+    flex-direction: column;
+    margin: 4px 0;
+
+}
+
+.input-field label {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.input-field input {
+    height: 42px;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+    padding: 0 15px;
+    margin: 8px 0;
+}
+
+.input-field input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px;
+}
+
+.input-field input[type="date"] {
+    color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+    color: black;
+}
+
+.container form button,
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    margin: 25px 0;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    transition: all 03sec linear;
+}
+
+.container form button,
+.container form .Backbtn {
+    font-size: large;
+    font-weight: 400;
+}
+
+form button:hover {
+    background-color: blue;
+}
+
+form button i {
+    margin: 0 6px;
+}
+form button i,
+
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+
+form .buttons button,
+.Backbtn {
+    margin-right: 18px;
+}
